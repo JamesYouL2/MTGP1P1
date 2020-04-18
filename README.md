@@ -7,7 +7,9 @@ Updatesheet is the function you want to call inside the python script.
 
 I regressed 17Lands draft data to the [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1WXUXAMrO33FZMPYJp9hDfMtlGpMyJJcNpcUUp_bZmTQ) provided by u/TheLovelyArcher.
 
-I had to do significant feature engineering. I took Games Played and normalized it by rarity so that the games played value used by the regressor shows how many times the average rarity a card was played.
+Not having amount of cards seen or cards picked like in previous iterations of 17lands data is annoying, but because these are human drafts, the drafts that 17lands sees should be more representative of the overall population of drafts. 
+
+I had to do some feature engineering. I took Games Played and normalized it by rarity so that the games played value used by the regressor shows how many times the average rarity a card was played.
 
 Games takes the number of games that a card was played and divides it by the mean number of times a card was seen for that rarity.
 
